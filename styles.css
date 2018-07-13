@@ -10,9 +10,31 @@ body {
     height: 100vh; /*height of browser */
 }
 
-h1 {
+h1#name {
     position: absolute;
     top: 30vh;
     right: 0;
     left: 0;
+    color: white;
 }
+
+.vNav {
+    position: fixed;
+    top: 20%;
+    left: 80%;
+    z-index: 10;
+    list-style: none;
+    width: 20px;
+}
+
+.vNav ul {
+    position: relative;
+    padding: 3px;
+    padding-left: 35%;
+    border: 1px black solid;
+}
+
+.vNav a{
+    text-decoration: none;
+}
+
