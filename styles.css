@@ -20,8 +20,8 @@ h1#name {
 
 .vNav {
     position: fixed;
-    top: 20%;
-    left: 80%;
+    top: 40%;
+    left: 90%;
     z-index: 10;
     list-style: none;
     width: 20px;
@@ -29,12 +29,41 @@ h1#name {
 
 .vNav ul {
     position: relative;
-    padding: 3px;
+    padding: 5px;
     padding-left: 35%;
-    border: 1px black solid;
+}
+
+.vNav ul li{
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 35%;
 }
 
 .vNav a{
+    display: block;
+    width: 12px;
+    height: 12px;
+    text-indent: -99px;
+    border-radius: 50%;
+    border: 2px solid white;
     text-decoration: none;
 }
+
+.vNav a:hover {
+    border-radius: 50%;
+    background-color: white;
+}
+
+.label {
+    position: relative;
+    top: -40%;
+    left: -200%;
+    width: 100%;
+    text-align: right;
+    color: white;
+    display: none;
+}
+
+
+
 
