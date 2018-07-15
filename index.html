@@ -9,14 +9,6 @@
     <link href = "https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans+Condensed:300,700|Source+Sans+Pro" rel="stylesheet"> <!-- google fonts -->
     <link href = "styles.css" rel = "stylesheet">
 
-
-    <script src = "../../jquery-3.3.1.js"></script>
-    <script>
-    $("document").ready(function() {
-        $("#background").append("<p> the page just loaded</p>");
-    })
-    </script>
-
     <title>Janice He | Software Developer </title>
 </head>
 
@@ -63,6 +55,19 @@
         <h1>Section 03</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis, lacus gravida pharetra posuere, neque ligula malesuada mi, ac accumsan turpis neque sit amet libero. Morbi a hendrerit nibh, sed tristique turpis. Vivamus hendrerit tincidunt urna nec laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent faucibus quis diam et auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ornare dui at nulla eleifend pharetra. </p>
     </div>
+
+
+    <script src = "../../jquery-3.3.1.js"></script>
+    <script>
+        $('a').click(function(){
+            $('html, body').animate({
+ 				scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, "slow");
+            return false;
+            });
+
+
+    </script>
 
 </body>
 </html>
