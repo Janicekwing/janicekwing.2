@@ -3,6 +3,8 @@ body {
     padding:0;
     font-family: 'Libre Baskerville', serif;
     text-align: center;
+    background:black;
+    color: white;
 }
 
 #background img{
@@ -21,7 +23,7 @@ h1#name {
 .vNav {
     position: fixed;
     top: 40%;
-    left: 90%;
+    left: 93%;
     z-index: 10;
     list-style: none;
     width: 20px;
