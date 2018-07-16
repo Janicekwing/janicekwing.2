@@ -51,7 +51,7 @@ h1#name {
     text-decoration: none;
 }
 
-.vNav a:hover {
+.vNav a:hover, a.active{
     border-radius: 50%;
     background-color: white;
 }
