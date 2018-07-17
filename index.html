@@ -141,41 +141,39 @@
 
         $(function() {
 
-            //Smooth scrolling: if a dot element with class 'page' is clicked
-            // scroll to the top of the hashed element (href to id), w duration 0.6 sec
+            //Smooth scrolling: when I click on a specific dot element
+            // scroll to the top of that element's hash (href to id), w duration 0.6 sec
             // additionally, set the dot active
 
-            $(".page").click(function() {
+            var page = $(".page");
+
+            $(page).click(function() {
                 $('html, body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 600)
-
-                $(".page").removeClass('active');
+                    scrollTop: $(this.hash).offset().top // set the top of our view (scrollTop) to the distance the element's hash from the top
+                }, 600);
+                $(page).removeClass('active');
                 $(this).addClass('active');
-
             });
 
-
-
-            $(".page").hover(function() {
+            $(page).hover(function() {
                 $(this).find(".label").show();
                 }, function(){
                 $(this).find(".label").hide();
             });
 
             //Active link switching: if the current location is greater than the section location
-            // set the class to active and remove the class active from the sibling elements
+            // set the class to active and remove the class active from the siblings' childrens' elements
 
-//            $(window).scroll(function() {
-//                var scrollbarLocation = $(this).scrollTop();  // current location of scrollbar
-//                scrollLink.each(function(){
-//                    var sectionOffset = $(this.hash).offset().top;  //determines how far away each id element from the top
-//                    if ( scrollbarLocation >= sectionOffset ) {
-//                        $(this).addClass("active");
-//                        $(this).siblings().removeClass("active");
-//                    };
-//                });
-//            });
+            $(window).scroll(function() {
+                var scrollbarLocation = $(this).scrollTop();  // current location of scrollbar
+                page.each(function(){
+                    var sectionOffset = $(this.hash).offset().top;  //determines how far away each id element from the top
+                    if ( scrollbarLocation >= sectionOffset ) {
+                        $(this).addClass("active");
+                        $(this).parent().siblings().children().removeClass("active");
+                    }
+                });
+            });
 
 
         });
