@@ -123,12 +123,13 @@
             });
 
             //Active link switching
+
             $(window).scroll(function() {
                 var scrollbarLocation = $(this).scrollTop();
                 scrollLink.each(function(){
                     var sectionOffset = $(this.hash).offset().top;  //determines how far away each id element from the top
                     if ( sectionOffset <= scrollbarLocation ) {
-                        $(this).parent().addClass("active");
+                        $(this).addClass("active");
                     }
                 });
             });
