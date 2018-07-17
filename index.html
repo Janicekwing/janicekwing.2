@@ -151,8 +151,6 @@
                 $('html, body').animate({
                     scrollTop: $(this.hash).offset().top // set the top of our view (scrollTop) to the distance the element's hash from the top
                 }, 600);
-                $(page).removeClass('active');
-                $(this).addClass('active');
             });
 
             $(page).hover(function() {
@@ -167,7 +165,7 @@
             $(window).scroll(function() {
                 var scrollbarLocation = $(this).scrollTop();  // current location of scrollbar
                 page.each(function(){
-                    var sectionOffset = $(this.hash).offset().top;  //determines how far away each id element from the top
+                    var sectionOffset = $(this.hash).offset().top - 20;  //determines how far away each id element from the top
                     if ( scrollbarLocation >= sectionOffset ) {
                         $(this).addClass("active");
                         $(this).parent().siblings().children().removeClass("active");
